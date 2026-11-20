@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SENA e-Portfolio · Group 56</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#123524;--green:#2f6b3f;--lime:#c6f24e;--mint:#f1f8e8;--bg:#f7faf2;--surface:#fff;--text:#1b1f1a;--muted:#55604f;--line:#d9e5cc;--hd:'Poppins',system-ui,sans-serif;--bd:'Open Sans',system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--mint:#16291c;--bg:#0d1a12;--surface:#13251a;--text:#e8f0e6;--muted:#a3b3a0;--line:#25402e;--green:#8fd18f}}
+:root[data-theme="dark"]{--mint:#16291c;--bg:#0d1a12;--surface:#13251a;--text:#e8f0e6;--muted:#a3b3a0;--line:#25402e;--green:#8fd18f}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 var(--bd)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--forest);z-index:10}
+h1,h2,h3{font-family:var(--hd);line-height:1.2;margin:0 0 .6em}
+h2{font-size:clamp(1.5rem,3vw,2rem);color:var(--green)}
+h3{font-size:1.1rem}
+a{color:inherit}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--forest);color:#fff}
+.bar{max-width:1080px;margin:auto;display:flex;align-items:center;gap:20px;padding:12px 20px}
+.logo{font:700 1.1rem var(--hd);white-space:nowrap}.logo span{color:var(--lime)}
+nav{display:flex;gap:4px;overflow-x:auto;flex:1;scrollbar-width:none;position:relative}
+nav a{color:#dfeedd;text-decoration:none;font-size:.88rem;padding:6px 12px;border-radius:99px;white-space:nowrap}
+nav a{transition:background .2s,color .2s}
+nav a:hover{background:rgba(255,255,255,.12)}
+nav a.active{background:var(--lime);color:#123524;font-weight:600}
+.tg{background:transparent;border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:99px;padding:6px 14px;cursor:pointer;font:600 .8rem var(--hd);white-space:nowrap}
+.tg:hover{background:rgba(255,255,255,.12)}
+.hero{background:var(--forest);color:#fff;padding:72px 20px 88px;border-radius:0 0 36px 36px}
+.wrap{max-width:1080px;margin:auto}
+.hero h1{font-size:clamp(2.2rem,6vw,4rem);max-width:760px}.hero h1 em{font-style:normal;color:var(--lime)}
+.hero p{max-width:600px;color:#cfe3cc;font-size:1.1rem}
+.btn{display:inline-block;background:var(--lime);color:#123524;font:600 .95rem var(--hd);padding:12px 24px;border-radius:99px;text-decoration:none;margin-top:14px}
+.banner{margin-top:32px;display:inline-block;border:1px solid rgba(198,242,78,.5);border-radius:14px;padding:10px 16px;font-size:.9rem;color:#e6f5d4}
+section{padding:56px 20px;background:var(--surface)}
+section:nth-of-type(even){background:var(--mint)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:-40px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 6px 18px rgba(0,0,0,.06)}
+.card h3{color:var(--green)}.card p{margin:0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:.92rem}
+th,td{padding:10px 14px;border-bottom:1px solid var(--line);text-align:left}
+th{background:var(--forest);color:#fff;font-family:var(--hd);font-weight:600}
+tr:last-child td{border-bottom:0}
+td.on{background:var(--lime);text-align:center}.gantt td+td{text-align:center}
+.tag{display:inline-block;background:var(--lime);color:#123524;font:600 .75rem var(--hd);padding:3px 10px;border-radius:99px}
+.entry{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--lime);border-radius:16px;padding:20px 22px;margin-bottom:16px}
+.entry small{color:var(--muted)}.entry dl{margin:12px 0 0;display:grid;grid-template-columns:130px 1fr;gap:6px 14px}
+.entry dt{font-weight:600;color:var(--green)}.entry dd{margin:0}
+@media(max-width:560px){.entry dl{grid-template-columns:1fr}}
+footer{background:var(--forest);color:#b9d1b5;text-align:center;padding:28px 20px;font-size:.88rem}
+</style>
+</head>
+<body>
+<header><div class="bar"><div class="logo">SENA<span>.</span></div>
+<nav><a href="#home">Home</a><a href="#project">The Project</a><a href="#design">Design</a><a href="#planning">Planning</a><a href="#research">Research</a><a href="#log">Project Log</a><a href="#team">Team</a><a href="#docs">Documents</a></nav><button class="tg" id="tg" type="button" aria-label="Switch light or dark theme">Dark</button></div></header>
+
+<div class="hero" id="home"><div class="wrap">
+<h1>Smart Essentials. <em>Nearby.</em> Accessible.</h1>
+<p>Free, private, donation-supported dispensing of sanitary pads and condoms, designed and built by Group 56 at Addis Ababa Science and Technology University.</p>
+<a class="btn" href="#docs">Read the Proposal</a><br>
+<div class="banner">Current stage: <b>Proposal</b>. The machine has not yet been built or tested. This site grows as our project does.</div>
+</div></div>
+
+<div style="padding:0 20px"><div class="wrap cards">
+<div class="card"><h3>Free access</h3><p>No login, registration or payment.</p></div>
+<div class="card"><h3>Private</h3><p>Discreet access at any hour.</p></div>
+<div class="card"><h3>Community-powered</h3><p>Optional donations help the next person.</p></div>
+</div></div>
+
+<section id="project"><div class="wrap">
+<h2>The Project</h2>
+<div class="grid">
+<div class="box"><h3>Background</h3><p>Access to basic hygiene and sexual-health products is part of everyday dignity, health and education. These products are usually sold in shops and pharmacies that may be far away, closed at night, or embarrassing to approach. Cost is an extra barrier for students and low-income users.</p><p>SENA (Smart Essentials Nearby and Accessible) is a smart vending machine that gives free access to sanitary pads and condoms with no registration, login or payment. After a user receives a product, the machine invites them to make a voluntary donation that helps someone else.</p></div>
+<div class="box"><h3>Problem</h3><p>People who need sanitary pads or condoms urgently often cannot get them easily. Shops may be closed or distant, cost can be a barrier, and asking in person can cause embarrassment. Some people miss classes or work, use unsafe alternatives, or go without protection. Existing vending solutions generally require payment.</p></div>
+</div>
+<div class="box" style="margin-top:20px"><h3>Objectives</h3><ul>
+<li>Design a two-compartment dispensing mechanism, each driven by a servo motor.</li>
+<li>Program an Arduino to read the selection, dispense exactly one item, and confirm with an IR sensor.</li>
+<li>Implement an LCD interface that guides the user and offers an optional donation.</li>
+<li>Implement a two-minute software lockout after each transaction.</li>
+<li>Provide a donation slot with a one-way chute and a secured collection box.</li>
+<li>Test the prototype and report its performance honestly.</li></ul></div>
+</div></section>
+
+<section id="design"><div class="wrap">
+<h2>Design</h2>
+<div class="tbl"><table><tr><th>Component</th><th>Role in SENA</th></tr>
+<tr><td>Arduino microcontroller</td><td>Reads buttons and sensor, drives servos, updates the LCD, runs the lockout timer</td></tr>
+<tr><td>Push buttons (2)</td><td>Select sanitary pads or condoms</td></tr>
+<tr><td>Servo motors</td><td>Push out one product at a time</td></tr>
+<tr><td>IR obstacle sensor</td><td>Confirms the product reached the tray</td></tr>
+<tr><td>LCD display</td><td>Instructions, donation message, lockout message</td></tr>
+<tr><td>Donation slot, chute, locked box</td><td>Collects donations so users cannot retrieve them</td></tr>
+<tr><td>Power supply</td><td>Regulated supply for the Arduino, LCD and servos</td></tr></table></div>
+<div class="grid" style="margin-top:20px">
+<div class="box"><h3>Software</h3><p>A simple state machine: Standby → Dispensing → Donation prompt → Lockout → Standby. The lockout uses the Arduino <code>millis()</code> timer instead of a blocking delay, so the LCD and buttons stay under control.</p></div>
+<div class="box"><h3>Power</h3><p>The prototype runs on a regulated mains supply, with servo current kept from disturbing the microcontroller. Solar with a rechargeable battery is only a possible future improvement.</p></div>
+<div class="box"><h3>Mechanical and security</h3><p>Two product compartments, a delivery tray, and a donation slot connected to a one-way chute into a fixed, lockable box. Final dimensions and materials will be set in the design stage.</p></div>
+<div class="box"><h3>Testing plan</h3><p>Buttons, servos, sensor and LCD are tested separately, then the integrated machine: correct selection, one item per request, sensor confirmation, LCD messages, a two-minute lockout, return to standby, and donations that cannot be retrieved. Failures and fixes will be recorded honestly.</p></div>
+</div>
+<p style="color:var(--muted)"><i>Coming later: circuit diagram, wiring photos, code excerpts, 3D model.</i></p>
+</div></section>
+
+<section id="planning"><div class="wrap">
+<h2>Planning</h2>
+<h3>Gantt chart (weeks from project start)</h3>
+<div class="tbl"><table class="gantt"><tr><th>Activity</th><th>W1–2</th><th>W3–4</th><th>W5–6</th><th>W7–8</th><th>W9–10</th><th>W11–12</th></tr>
+<tr><td>Proposal, survey design, literature review</td><td class="on">●</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Data collection and analysis</td><td class="on">●</td><td class="on">●</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Concept and detailed design</td><td></td><td class="on">●</td><td class="on">●</td><td></td><td></td><td></td></tr>
+<tr><td>Component selection and procurement</td><td></td><td></td><td class="on">●</td><td></td><td></td><td></td></tr>
+<tr><td>Circuit assembly and Arduino programming</td><td></td><td></td><td class="on">●</td><td class="on">●</td><td></td><td></td></tr>
+<tr><td>Construction of enclosure and mechanism</td><td></td><td></td><td></td><td class="on">●</td><td class="on">●</td><td></td></tr>
+<tr><td>Integration and testing</td><td></td><td></td><td></td><td></td><td class="on">●</td><td class="on">●</td></tr>
+<tr><td>Final report and presentation</td><td></td><td></td><td></td><td></td><td></td><td class="on">●</td></tr></table></div>
+<h3 style="margin-top:28px">Project flow</h3>
+<p>Problem identification and survey → Concept design → Detailed design → Procurement and construction → Integration → Testing and improvement → Reporting and presentation.</p>
+</div></section>
+
+<section id="research"><div class="wrap">
+<h2>Research and Data</h2>
+<p><span class="tag">In progress</span> A preliminary survey is under way. We are not claiming any statistics yet.</p>
+<div class="grid">
+<div class="box"><h3>What we’re finding out</h3><ul><li>How often people need these products urgently and where they get them now</li><li>Whether they would use a free machine, and whether they would donate</li><li>Preferred placement and privacy expectations</li><li>Typical product sizes and restocking needs</li></ul></div>
+<div class="box"><h3>Methods</h3><ul><li>A short anonymous questionnaire with no personal identification</li><li>Site visits to candidate campus locations</li><li>A review of existing vending machines and literature</li></ul><p>Participation is voluntary, and results will be shown only in aggregate.</p></div>
+</div>
+<p style="color:var(--muted)"><i>Findings to be added: survey charts, site comparison, limitations of the sample.</i></p>
+</div></section>
+
+<section id="log"><div class="wrap">
+<h2>Project Log</h2>
+<p>Newest entries first. Each entry records what we did, found, got wrong, and plan next.</p>
+<div id="entries"></div>
+</div></section>
+
+<section id="team"><div class="wrap">
+<h2>Team and Reflections</h2>
+<div class="tbl"><table><tr><th>Member</th><th>Department</th><th>Focus</th></tr>
+<tr><td>Singitan Niguse</td><td>Software Engineering</td><td>Controller code, UI logic, integration</td></tr>
+<tr><td>Firaol Mengistu</td><td>Civil Engineering</td><td>Structure, weather protection, cost estimate</td></tr>
+<tr><td>Embakom Goba</td><td>Electrical and Computer Eng.</td><td>Power system, wiring, safety</td></tr>
+<tr><td>Feven Kassahun</td><td>Electromechanical Eng.</td><td>Motor selection, dispenser control</td></tr>
+<tr><td>Yadeel Bezuayehu</td><td>Electrical and Computer Eng.</td><td>Circuit, sensors, electronics testing</td></tr>
+<tr><td>Muhammed Ali</td><td>Software Engineering</td><td>Screens, software testing</td></tr>
+<tr><td>Kirubel Wubshet</td><td>Architecture</td><td>Enclosure, privacy design, 3D model</td></tr>
+<tr><td>Abdulkeni Seid</td><td>Mining Engineering</td><td>Site study, materials, budget</td></tr>
+<tr><td>Samuel Abraham</td><td>Mechanical Engineering</td><td>Frame, drawings, fabrication</td></tr></table></div>
+<div class="box" style="margin-top:20px"><h3>Reflection prompts</h3><p>Each member writes a short reflection at every milestone:</p><ol><li>What did I work on this period?</li><li>What went wrong, and how did I fix it?</li><li>What did I learn from another discipline in the team?</li><li>What will I do differently next time?</li></ol></div>
+</div></section>
+
+<section id="docs"><div class="wrap">
+<h2>Documents</h2>
+<div class="box"><ul>
+<li>Project Proposal, IETP4115 (November 2026)</li>
+<li>Appendix A: Preliminary survey questionnaire (draft)</li>
+<li>Appendix B: Site visit checklist</li>
+<li>References: Arduino documentation; UNESCO (2014); United Nations (2015); WHO/UNICEF JMP (2023)</li></ul></div>
+</div></section>
+
+<footer>SENA · Group 56 · IETP4115 · Addis Ababa Science and Technology University</footer>
+
+<script>
+/* ADD NEW PROJECT LOG ENTRIES HERE (newest at the top) */
+const LOG=[
+{title:"Survey design",date:"Week 2 · November 2026",author:"All members",
+ did:"Drafted the anonymous survey questionnaire and the site visit checklist.",
+ found:"Questions must avoid collecting names or ID numbers to protect privacy.",
+ wrong:"Nothing yet; the survey has not been run.",
+ next:"Ask our advisor about ethical handling, then run the survey on campus."},
+{title:"Proposal submitted",date:"Week 1 · November 2026",author:"All members",
+ did:"Defined the problem, objectives, system components, schedule and task split.",
+ found:"A free, private machine with an optional donation slot fills a gap left by pay-only vending.",
+ wrong:"Some task descriptions mentioned features outside the proposal’s scope, so we are aligning them.",
+ next:"Collect survey data and begin concept design."}
+];
+const box=document.getElementById('entries');
+try{box.innerHTML=LOG.map(e=>`<article class="entry"><h3>${e.title}</h3><small>${e.date} · ${e.author}</small><dl><dt>What we did</dt><dd>${e.did}</dd><dt>What we found</dt><dd>${e.found}</dd><dt>What went wrong</dt><dd>${e.wrong}</dd><dt>Next steps</dt><dd>${e.next}</dd></dl></article>`).join('')}catch(err){box.textContent='Log unavailable.'}
+
+/* Scroll spy: highlights the menu item for the section you are in */
+const nav=document.querySelector('nav'),links=[...nav.querySelectorAll('a')],secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+let cur=-1;
+function spy(){
+ const y=window.scrollY+120;let i=0;
+ secs.forEach((s,k)=>{if(s.offsetTop<=y)i=k});
+ if(window.innerHeight+window.scrollY>=document.body.scrollHeight-4)i=secs.length-1;
+ if(i!==cur){cur=i;links.forEach((a,k)=>a.classList.toggle('active',k===i));
+  const a=links[i];nav.scrollTo({left:a.offsetLeft-nav.clientWidth/2+a.clientWidth/2,behavior:'smooth'})}
+}
+addEventListener('scroll',spy,{passive:true});addEventListener('resize',spy);spy();
+
+/* Light / dark toggle */
+const root=document.documentElement,tg=document.getElementById('tg');
+function isDark(){return root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches}
+function label(){tg.textContent=isDark()?'Light':'Dark'}
+try{const s=localStorage.getItem('sena-theme');if(s)root.dataset.theme=s}catch(e){}
+label();
+tg.addEventListener('click',()=>{const t=isDark()?'light':'dark';root.dataset.theme=t;try{localStorage.setItem('sena-theme',t)}catch(e){}label()});
+</script>
+</body>
+</html>
